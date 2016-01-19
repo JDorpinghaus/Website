@@ -1,3 +1,3 @@
-# [Dorpinghaus.com](dorpinghaus.com)
+# [Dorpinghaus.com](http://dorpinghaus.com)
 
 Future digital portfolio for Jacob Dorpinghaus. 
