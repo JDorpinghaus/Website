@@ -89,12 +89,13 @@ body {
   margin: 0px;
   padding: 0px;
   z-index: 3;
-  background: #fff;
   width: 150px;
   height: 50px;
   position: fixed;
   bottom: 50px;
   right: 50px;
+  font-size: 0px;
+  background: rgba(255,255,255,.25);
 }
 .linkButton{
   display: inline-block;
@@ -102,4 +103,19 @@ body {
   padding: 0px;
   width: 50px;
   height: 50px;
+  background-position: 0 0;
+  background-size: cover;
+}
+.linkButton:hover{
+  background-position: 0 100%;
+  cursor: pointer;
+}
+#githubButton{
+  background-image: url(img/githubButton.png);
+}
+#linkedinButton{
+  background-image: url(img/linkedinButton.png);
+}
+#emailButton{
+  background-image: url(img/emailButton.png);
 }
