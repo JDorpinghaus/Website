@@ -33,7 +33,7 @@ body {
 }
 #box {
   display: flex;
-  width: calc(50% + 100px);
+  width: calc(50% + 400px);
   z-index: 5;
   max-height: 910px;
 }
@@ -77,10 +77,15 @@ body {
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 50px;
+  width: 100px;
   font-size: 50px;
   line-height: 50px;
+}
+#leftButton{
+  justify-content: flex-start;
+}
+#rightButton{
+  justify-content: flex-end;
 }
 .fa {
   cursor: pointer;
