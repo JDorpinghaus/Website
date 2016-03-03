@@ -15,6 +15,7 @@ function addGalleryClicks(){
             project--;
         }
         setBullet();
+        setProject();
     });
     $("#rightButton i").click(function(){
         if (project==projects){
@@ -24,6 +25,7 @@ function addGalleryClicks(){
         }
         console.log('right clicked');
         setBullet();
+        setProject();
     });
 }
 function setBullet(){
@@ -34,6 +36,9 @@ function setBullet(){
     $("#bullet_" + project.toString()).css("background", "rgba(255,255,255, 1)");
 }
 function setProject(){
-    var imgurl = "css/img/projectsplash_" + project.toString();
-    $("#background").attr("background", "url("+imgurl+")");
+    var imgurl = "css/img/projectsplash_" + project.toString() + ".jpg";
+    $("#project").attr("src", imgurl);
+    $("#background").css("background", "url("+imgurl+")");
+    $("#background").css("background-size", "cover");
+    $("#background").css("background-position", "center");
 }
