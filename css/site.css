@@ -71,7 +71,7 @@ body {
   height: 100%;
   width: calc(100% - 100px);
 }
-#project{
+.project[active='true']{
   max-height: 890px;
   width: 100%;
 }
@@ -152,3 +152,7 @@ body {
 #emailButton{
   background-image: url(img/emailButton.png);
 }
+.project[active='false']{
+  display: none;
+}
+
