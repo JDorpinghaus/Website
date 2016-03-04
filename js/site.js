@@ -50,24 +50,24 @@ function setBullet(){
     $("#bullet_" + project.toString()).css("background", "rgba(255,255,255, 1)");
 }
 function setProject(direction){
-    var bimgurl = "css/img/projectsplashb_" + project.toString() + ".jpg";
-    var imgurl = "css/img/projectsplash_" + project.toString() + ".jpg";
-    $("#background_1").css("background", "url("+bimgurl+")");
-    $("#background_2").transition({
-        opacity: 0,
-        transform: "scale(5.0)"
-    },1000,function(){
-        var temp = $("#background_1");
-        $("#background_2").attr("id", "background_1");
-        temp.attr("id", "background_2");
-        $("#background_1").css("opacity", 1);
-        $("#background_2").attr("opacity", 1);
+    $("#background_" + project).transition({
+       transform: "scale(1.1)",
+       opacity: 1
+    },function(){
+        $("#background_" + project).attr('active', 'true');
+        //$("#background_" + project).css({"background-size":"cover","background-position":"center"});
         resumeClicks("#rightButton i");
         resumeClicks("#leftButton i");
     });
-    $("#background_1").transition({
-       transform: "scale(1.1)" 
-    },1000);
+    $(".background[active='true']").css("opacity", 1);
+    $(".background[active='true']").transition({
+        opacity: 0,
+        transform: "scale(5.0)"
+    },function(){
+        resumeClicks("#rightButton i");
+        resumeClicks("#leftButton i");
+    });
+    $(".background[active='true']").attr('active', 'false');
 }
 function preload(arrayOfImages) {
     $(arrayOfImages).each(function () {
@@ -93,4 +93,7 @@ function pauseClicks(selector){
 }
 function resumeClicks(selector){
     $(selector).css("pointer-events", "auto");
+}
+function initProject(){
+   // $("background_1").attr()
 }
